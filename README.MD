@@ -1,5 +1,8 @@
 # AnalogClock Power Platform Component
 ![Alt text](assets/image.png)
+## NB
+COde is mainly based on [this repo](https://github.com/victornpb/analog-counter-wheel)
+
 ## Description
 This is a custom component for Power Platform that displays an analog clock written in React.
 
