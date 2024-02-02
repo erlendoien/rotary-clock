@@ -4,10 +4,11 @@ import { useMemo } from "react";
 
 export interface RotaryClockProps {
   total_number: number;
+  num_counters?: number
 }
 
-const RotaryClock: React.FC<RotaryClockProps> = ({ total_number }) => {
-  const digits = total_number.toString().padStart(7, "0").split("").map(Number);
+const RotaryClock: React.FC<RotaryClockProps> = ({ total_number, num_counters=7 }) => {
+  const digits = total_number.toString().padStart(num_counters, "0").split("").map(Number);
 
   return (
     <div
