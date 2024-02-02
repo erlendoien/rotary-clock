@@ -15,8 +15,7 @@ const Counter: React.FC<ICounterProps> = ({ raw_digit}) => {
     const [pos, setPos] = useState(digit);
     const [transitioning, setTransitioning] = useState(false);
 
-    // const moveBy = (x: number) => {
-    //     if (x !== 0) {
+    // const moveBy = (x: number) => { //     if (x !== 0) {
     //         setPos((prevPos) => n(prevPos + x, values.length));
     //     }
     // };
@@ -34,7 +33,7 @@ const Counter: React.FC<ICounterProps> = ({ raw_digit}) => {
                 // } else {
                     moveBy(1);
                 // }
-            }, 50); // Adjust the delay here (in milliseconds)
+            }, 75); // Adjust the delay here (in milliseconds)
         };
 
         const stopMoving = () => {

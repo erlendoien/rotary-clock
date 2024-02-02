@@ -1,5 +1,4 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { HelloWorld, IHelloWorldProps } from "./HelloWorld";
 import ROtaryClock, { RotaryClockProps } from "./RotaryClock";
 import * as React from "react";
 

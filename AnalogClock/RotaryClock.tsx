@@ -1,16 +1,13 @@
 import React = require("react");
 import Counter from "./Counter";
+import { useMemo } from "react";
 
 export interface RotaryClockProps {
   total_number: number;
 }
 
 const RotaryClock: React.FC<RotaryClockProps> = ({ total_number }) => {
-const digits = total_number
-    .toString()
-    .padStart(7, "0")
-    .split("")
-    .map(Number);
+  const digits = total_number.toString().padStart(7, "0").split("").map(Number);
 
   return (
     <div
@@ -22,9 +19,9 @@ const digits = total_number
         padding: "1em",
       }}
     >
-      {digits.map((digit, index) => (
-        <Counter key={index} raw_digit={digit} />
-      ))}
+      {digits.map((digit, index) =>
+        useMemo(() => <Counter key={index} raw_digit={digit} />, [digit])
+      )}
     </div>
   );
 };
